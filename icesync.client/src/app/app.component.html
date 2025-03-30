@@ -1,0 +1,122 @@
+<!--<div class="container mt-5">
+  <h1 class="mb-4">IceSync Workflows</h1>
+
+  <div *ngIf="message" class="alert alert-info">{{ message }}</div>
+
+  <table class="table table-bordered" *ngIf="workflows.length > 0">
+    <thead>
+      <tr>
+        <th>Workflow ID</th>
+        <th>Workflow Name</th>
+        <th>Is Active</th>
+        <th>Multi Exec Behavior</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let workflow of workflows">
+        <td>{{ workflow.workflowId }}</td>
+        <td>{{ workflow.workflowName }}</td>
+        <td>{{ workflow.isActive }}</td>
+        <td>{{ workflow.multiExecBehavior }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="runWorkflow(workflow.workflowId)">
+            Run Workflow
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="workflows.length === 0">No workflows available.</p>
+</div>-->
+
+
+
+<!--<div class="container my-5">-->
+  <!-- Title -->
+  <!--<h1 class="text-center mb-4 text-primary">IceSync Workflows Management</h1>-->
+
+  <!-- Display success or error message -->
+  <!--<div *ngIf="message" class="alert text-center">
+    {{ message }}
+  </div>-->
+
+  <!-- Workflow table -->
+  <!--<div class="table-responsive shadow rounded">
+    <table class="table table-bordered table-striped align-middle">
+      <thead class="bg-primary text-white">
+        <tr>
+          <th scope="col">Workflow ID</th>
+          <th scope="col">Workflow Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Multi Exec Behavior</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workflow of workflows">
+          <td>{{ workflow.workflowId }}</td>
+          <td>{{ workflow.workflowName }}</td>
+          <td>
+            <span class="badge px-3 py-2"
+                  [ngClass]="workflow.isActive ? 'bg-success' : 'bg-secondary'">
+              {{ workflow.isActive ? 'Active' : 'Inactive' }}
+            </span>
+          </td>
+          <td>{{ workflow.multiExecBehavior }}</td>
+          <td class="text-center">
+            <button class="btn btn-outline-primary btn-sm"
+                    (click)="runWorkflow(workflow.workflowId)"
+                    [disabled]="!workflow.isActive">
+              Run Workflow
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>-->
+
+
+<div class="container my-5">
+  <!-- Title -->
+  <h1 class="text-center mb-4 gradient-text">IceSync Workflows Management</h1>
+
+  <!-- Display success or error message -->
+  <div *ngIf="message" class="alert text-center shadow-lg">
+    {{ message }}
+  </div>
+
+  <!-- Workflow table -->
+  <div class="table-container shadow-lg rounded p-3">
+    <table class="table table-bordered align-middle">
+      <thead>
+        <tr>
+          <th scope="col">Workflow ID</th>
+          <th scope="col">Workflow Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Multi Exec Behavior</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workflow of workflows">
+          <td>{{ workflow.workflowId }}</td>
+          <td>{{ workflow.workflowName }}</td>
+          <td>
+            <span class="badge status-badge" [ngClass]="workflow.isActive ? 'active' : 'inactive'">
+              {{ workflow.isActive ? 'Active' : 'Inactive' }}
+            </span>
+          </td>
+          <td>{{ workflow.multiExecBehavior }}</td>
+          <td class="text-center">
+            <button class="btn custom-btn" (click)="runWorkflow(workflow.workflowId)" [disabled]="!workflow.isActive">
+              Run Workflow
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
