@@ -15,6 +15,7 @@ Frontend: Angular (for displaying the workflows grid and API communication)
 Database: SQL Server
 
 Architecture: Repository Pattern with folder separation (DOMAIN, APPLICATION, INFRASTRUCTURE, CONTROLLERS)
+This architecture ensures modularity, testability, and adherence to separation of concerns
 
 Implementation Details
 
