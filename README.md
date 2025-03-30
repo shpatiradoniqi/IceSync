@@ -41,3 +41,7 @@ DTOs - Defines WorkflowDto.
 Controllers:
 
 WorkflowController.cs - Exposes GetWorkflows and RunWorkflow API endpoints.
+
+Photo where it seems working this icesync also with button "RunWorkFlow" included:
+![working grid](https://github.com/user-attachments/assets/02613b74-32da-4479-8c7f-a009beed887e)
+
